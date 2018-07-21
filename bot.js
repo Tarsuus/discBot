@@ -11,5 +11,10 @@ client.on('message', message => {
   	}
 });
 
+client.on('UserConnection', userConnection => {
+   console.log("User connected, userId:["+userConnection.id+"], name:["+userConnection.name+"],
+               revoked:["+userConnection.revoked+"],type:["+userConnection.type+"],user:["+userConnection.user+"]");
+});
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
