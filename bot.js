@@ -12,8 +12,8 @@ client.on('message', message => {
 });
 
 client.on('presenceUpdate', (oldMember,newMember) => {
-    console.log(' oldMumber joinedAt '+ oldMember.joinedAt+' joinedTimestamp '+ oldMember.joinedTimestamp+' nick '+oldMember.displayName);   
-    console.log(' newMember joinedAt '+ newMember.joinedAt+' joinedTimestamp '+ newMember.joinedTimestamp+' nick '+newMember.displayName);   
+    console.log(' oldMumber speaking'+oldMember.speaking+' nick '+oldMember.displayName);
+    console.log(' newMember speaking'+newMember.speaking+' nick '+newMember.displayName);
 });
 
 client.on('guildMemberAdd', member => {
