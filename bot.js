@@ -15,7 +15,7 @@ fs.readdir("./commands/", (err, files) => {
 
     jsfile.forEach((f, i) => {
         let props = require(`./commands/${f}`);
-        console.log(`${f} chargé !`);
+        console.log(props.help.name +" chargé !");
         bot.commands.set(props.help.name, props);
     });
 });
@@ -35,6 +35,7 @@ bot.on('message', message => {
     let args = messageArray[1];
     
     let commandfile = bot.commands.get(cmd.slice(1));
+    console.log(commandfile +" va être éxecuté ");
     if(commandfile) commandfile.run(bot,message,args);
 });
 
