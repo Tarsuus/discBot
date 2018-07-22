@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const fs = required("fs");
+const fs = require("fs");
 
 fs.readdir("./commands/", (err, files) => {
 
