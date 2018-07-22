@@ -25,9 +25,9 @@ bot.on("ready", () => {
     console.log(" Paré à l\'action !");
 });
 
-bot.on('message', message => {
-    if (message.content === 'ping') {
-    	message.reply('C\'est ...la mer noire');
+bot.on("message", message => {
+    if (message.content === "ping") {
+    	message.reply("C\'est ...la mer noire");
   	}
     
     let messageArray = message.content.split(" ");
@@ -35,13 +35,7 @@ bot.on('message', message => {
     let args = messageArray[1];
     
     let commandfile = bot.commands.get(cmd.slice(1));
-    console.log(commandfile +" va être éxecuté ");
     if(commandfile) commandfile.run(bot,message,args);
-});
-
-bot.on('presenceUpdate', (oldMember,newMember) => {
-    console.log(' oldMumber speaking'+oldMember.speaking+' nick '+oldMember.displayName);
-    console.log(' newMember speaking'+newMember.speaking+' nick '+newMember.displayName);
 });
 
 bot.on('guildMemberAdd', member => {
