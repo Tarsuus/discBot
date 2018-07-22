@@ -23,8 +23,8 @@ fs.readdir("./commands/", (err, files) => {
 });
 
 
-bot.on('ready', () => {
-    console.log('I am ready!');
+bot.on("ready", () => {
+    console.log(" Paré à l\'action !");
 });
 
 bot.on('message', message => {
