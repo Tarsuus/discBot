@@ -4,8 +4,6 @@ const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
-const prefix = "!";
-
 fs.readdir("./commands/", (err, files) => {
 
     if(err) console.log(err);
@@ -36,7 +34,7 @@ bot.on('message', message => {
     let cmd = messageArray[0];
     let args = messageArray[1];
     
-    let commandfile = bot.commands.get(cmd.slide(prefix.length));
+    let commandfile = bot.commands.get(cmd.slice(1));
     if(commandfile) commandfile.run(bot,message,args);
 });
 
