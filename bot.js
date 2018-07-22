@@ -4,6 +4,8 @@ const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 
+const prefix = "!";
+
 fs.readdir("./commands/", (err, files) => {
 
     if(err) console.log(err);
@@ -29,6 +31,13 @@ bot.on('message', message => {
     if (message.content === 'ping') {
     	message.reply('C\'est ...la mer noire');
   	}
+    
+    let messageArray = message.content.split(" ");
+    let cmd = messageArray[0];
+    let args = messageArray[1];
+    
+    let commandfile = bot.commands.get(cmd.slide(prefix.length));
+    if(commandfile) commandfile.run(bot,message,args);
 });
 
 bot.on('presenceUpdate', (oldMember,newMember) => {
