@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const bot = new Discord.Client({disableEveryone: true});
 const fs = require("fs");
 bot.commands = new Discord.Collection();
 
@@ -23,25 +23,25 @@ fs.readdir("./commands/", (err, files) => {
 });
 
 
-client.on('ready', () => {
+bot.on('ready', () => {
     console.log('I am ready!');
 });
 
-client.on('message', message => {
+bot.on('message', message => {
     if (message.content === 'ping') {
     	message.reply('C\'est ...la mer noire');
   	}
 });
 
-client.on('presenceUpdate', (oldMember,newMember) => {
+bot.on('presenceUpdate', (oldMember,newMember) => {
     console.log(' oldMumber speaking'+oldMember.speaking+' nick '+oldMember.displayName);
     console.log(' newMember speaking'+newMember.speaking+' nick '+newMember.displayName);
 });
 
-client.on('guildMemberAdd', member => {
+bot.on('guildMemberAdd', member => {
     console.log('new member joinedAt '+ member.joinedAt);
     console.log('new member joinedTimestamp '+ member.joinedTimestamp);
 });
 
 // THIS  MUST  BE  THIS  WAY
-client.login(process.env.BOT_TOKEN);
+bot.login(process.env.BOT_TOKEN);
