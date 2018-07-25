@@ -38,6 +38,13 @@ bot.on("message", message => {
     if(commandfile) commandfile.run(bot,message,args);
 });
 
+bot.on('presenceUpdate', (oldMember, newMember) => {
+  console.log('old:'+ displayName);
+  console.log(oldMember.user.joinedAt);
+  console.log('new:'+ displayName);
+  console.log(newMember.user.joinedAt);
+});
+
 bot.on('guildMemberAdd', member => {
     console.log('new member joinedAt '+ member.joinedAt);
     console.log('new member joinedTimestamp '+ member.joinedTimestamp);
