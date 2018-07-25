@@ -39,9 +39,9 @@ bot.on("message", message => {
 });
 
 bot.on('presenceUpdate', (oldMember, newMember) => {
-  console.log('old:'+ displayName);
+  console.log('old:'+ oldMember.user.displayName);
   console.log(oldMember.user.joinedAt);
-  console.log('new:'+ displayName);
+  console.log('new:'+ newMember.user.displayName);
   console.log(newMember.user.joinedAt);
 });
 
