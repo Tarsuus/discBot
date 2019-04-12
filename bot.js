@@ -27,7 +27,7 @@ bot.on("ready", () => {
 
 bot.on("message", message => {
     if (message.content === "ping") {
-    	message.reply("C\'est ...la mer noire");
+    	message.reply("C\'est ...la mer rouge");
   	}
     
     let messageArray = message.content.split(" ");
