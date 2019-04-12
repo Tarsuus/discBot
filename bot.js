@@ -27,7 +27,7 @@ bot.on("ready", () => {
 
 bot.on("message", message => {
     if (message.content === "Sale bot, entrave trashygirl c'est un ordre !") {
-    	message.reply("Oui maitres, vos désirs sont des ordres !");
+    	message.reply("Oui maitre, vos désirs sont des ordres !");
   	}
     
     let messageArray = message.content.split(" ");
