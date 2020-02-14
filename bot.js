@@ -28,10 +28,10 @@ bot.on("ready", () => {
 bot.on("message", message => {
     if (message.content === "blabla mister freeman") {
     	message.reply(":musical_note: :musical_note:
-@everyone Socks breaking news interrompt votre émission pour vous rappeller que notre grand gourou est parti dans des contrés encore inexploré pour répandre la bonne parole une fois de plus !
+@everyone Socks breaking news interrompt votre émission pour vous rappeler que notre grand gourou est parti dans des contrés encore inexploré pour répandre la bonne parole une fois de plus !
 **Il ne pourra donc pas assurer ses séances farineuses du samedi soir et dimanche matin. Il reviendra de son périple possiblement pour la séance du dimanche soir !**
-Nous lui souhaitons tous bonne chance dans son aventure, gloire à la chaussette et gloire au grand gourou !
-C'était socks breaking news, pour les chaussetes et par les chaussettes !
+Nous lui souhaitons tous bonne chance dans son aventure, gloire à la chaussette et gloire au grand gourou ! 
+C'était socks breaking news, pour les chaussettes et par les chaussettes !
 :musical_note: :musical_note:");
   	}
     
