@@ -27,7 +27,7 @@ bot.on("ready", () => {
 
 bot.on("message", message => {
     if (message.content === "blabla mister freeman") {
-    	message.reply(":musical_note: :musical_note:")
+    	message.reply(":musical_note: :musical_note:\n everyone Socks ")
     }
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
