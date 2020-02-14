@@ -27,7 +27,7 @@ bot.on("ready", () => {
 
 bot.on("message", message => {
     if (message.content === "blabla mister freeman") {
-    	message.reply(":musical_note: :musical_note:\n everyone Socks ")
+    	message.reply(":musical_note: :musical_note:\n @everyone Socks breaking news interrompt votre émission pour vous rappeler que notre grand gourou est parti dans des contrés encore inexploré pour répandre la bonne parole une fois de plus !")
     }
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
