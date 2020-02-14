@@ -27,8 +27,8 @@ bot.on("ready", () => {
 
 bot.on("message", message => {
     if (message.content === "!news") {
-    	 if(message.channel.name ==="📰-socks-breaking-news2" ){
-             message.channel.send(":musical_note: :musical_note:\n @everyone Socks breaking news interrompt votre émission pour vous rappeler que notre grand gourou est parti dans des contrés encore inexploré pour répandre la bonne parole ! \n Il ne pourra donc pas assurer ses séances farineuses du samedi soir et dimanche matin. Il reviendra de son périple possiblement pour la séance du dimanche soir ! \n Nous lui souhaitons tous bonne chance dans son aventure, c'était socks breaking news, pour les chaussettes et par les chaussettes !\n :musical_note: :musical_note:",{disableEveryone: false})
+    	 if(message.channel.name ==="📰-socks-breaking-news" ){
+             message.channel.send(":musical_note: :musical_note:\n @everyone Socks breaking news interrompt votre émission pour vous rappeler que notre grand gourou est parti dans des contrés encore inexploré pour répandre la bonne parole ! \n Il ne pourra donc pas assurer ses séances farineuses du samedi soir et dimanche matin. Il reviendra de son périple possiblement pour la séance du dimanche soir ! \n Nous lui souhaitons tous bonne chance dans son aventure, c'était Socks breaking news, pour les chaussettes et par les chaussettes !\n :musical_note: :musical_note:",{disableEveryone: false})
          }
     }
     let messageArray = message.content.split(" ");
